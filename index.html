@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurante em Canoas/RS especializado em carnes, hambúrgueres artesanais, massas e pratos preparados na brasa.">
+    <title>Sabor & Brasa | Restaurante em Canoas</title>
+    
+    <!-- Open Graph Básico -->
+    <meta property="og:title" content="Sabor & Brasa | Restaurante">
+    <meta property="og:description" content="Experiência gastronômica inesquecível em Canoas. Carnes grelhadas, hambúrgueres artesanais e muito mais.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#inicio" class="logo">
+                <h1>SABOR & BRASA</h1>
+                <span>RESTAURANTE</span>
+            </a>
+            
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#avaliacoes">Avaliações</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button class="cart-btn" aria-label="Abrir Carrinho" onclick="toggleCart()">🛒 <span id="cart-count">0</span></button>
+                    <a href="#reservas" class="btn-primary">RESERVAR MESA</a>
+                </div>
+            </nav>
+
+            <button id="mobile-btn" aria-label="Abrir Menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section id="inicio" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content fade-up">
+                <h2 class="hero-title">SABOR QUE<br>FICA NA MEMÓRIA.</h2>
+                <p class="hero-subtitle">Uma experiência gastronômica feita para compartilhar.</p>
+                <p class="hero-text">Ingredientes selecionados, receitas artesanais e aquele sabor de comida feita com carinho.</p>
+                <div class="hero-buttons">
+                    <a href="#cardapio" class="btn-primary">VER CARDÁPIO</a>
+                    <a href="#reservas" class="btn-outline">RESERVAR MESA</a>
+                </div>
+            </div>
+            <div class="hero-bottom container fade-up">
+                <div class="info-badge">⏰ SEG — DOM | 11:30 — 23:00</div>
+                <div class="info-badge">📍 Canoas — RS</div>
+            </div>
+        </section>
+
+        <!-- Destaques -->
+        <section id="destaques" class="destaques section-padding">
+            <div class="container">
+                <div class="section-header center fade-up">
+                    <h2>FEITO NA BRASA. FEITO COM AMOR.</h2>
+                    <p>Do preparo dos ingredientes ao último detalhe do prato, tudo é pensado para proporcionar uma experiência especial.</p>
+                </div>
+                <div class="destaques-grid">
+                    <div class="destaque-card fade-up">
+                        <div class="icon">🔥</div>
+                        <h3>Ingredientes selecionados</h3>
+                        <p>Produtos escolhidos diariamente para garantir qualidade.</p>
+                    </div>
+                    <div class="destaque-card fade-up" style="transition-delay: 0.1s;">
+                        <div class="icon">👨‍🍳</div>
+                        <h3>Preparo artesanal</h3>
+                        <p>Cada prato é preparado com cuidado pela nossa equipe.</p>
+                    </div>
+                    <div class="destaque-card fade-up" style="transition-delay: 0.2s;">
+                        <div class="icon">❤️</div>
+                        <h3>Ambiente acolhedor</h3>
+                        <p>Um espaço para reunir amigos, família e boas histórias.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre -->
+        <section id="sobre" class="sobre section-padding">
+            <div class="container sobre-container">
+                <div class="sobre-img fade-right">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="Interior do restaurante Sabor & Brasa" loading="lazy">
+                </div>
+                <div class="sobre-content fade-left">
+                    <h2 class="section-title">UMA HISTÓRIA DE SABOR</h2>
+                    <p>O Sabor & Brasa nasceu do desejo de reunir pessoas em torno de uma boa mesa. Nossa cozinha combina receitas tradicionais com uma apresentação contemporânea.</p>
+                    <div class="sobre-stats">
+                        <div class="stat"><strong>Desde 2020</strong></div>
+                        <div class="stat"><strong>+10.000 clientes</strong></div>
+                        <div class="stat"><strong>4.9/5 avaliações</strong></div>
+                        <div class="stat"><strong>20+ pratos</strong></div>
+                    </div>
+                    <a href="#galeria" class="btn-primary">CONHEÇA NOSSA HISTÓRIA</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cardápio -->
+        <section id="cardapio" class="cardapio section-padding">
+            <div class="container">
+                <div class="section-header center fade-up">
+                    <h2>NOSSO CARDÁPIO</h2>
+                    <p>Escolha seu próximo favorito.</p>
+                </div>
+
+                <div class="filtros fade-up">
+                    <button class="filtro-btn active" data-filter="todos">Todos</button>
+                    <button class="filtro-btn" data-filter="entradas">Entradas</button>
+                    <button class="filtro-btn" data-filter="hamburgueres">Hambúrgueres</button>
+                    <button class="filtro-btn" data-filter="carnes">Carnes</button>
+                    <button class="filtro-btn" data-filter="massas">Massas</button>
+                    <button class="filtro-btn" data-filter="porcoes">Porções</button>
+                    <button class="filtro-btn" data-filter="sobremesas">Sobremesas</button>
+                    <button class="filtro-btn" data-filter="bebidas">Bebidas</button>
+                </div>
+
+                <div class="menu-grid" id="menu-grid">
+                    <!-- Os itens serão gerados via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Prato Destaque -->
+        <section class="prato-destaque section-padding">
+            <div class="container prato-destaque-container">
+                <div class="prato-info fade-right">
+                    <span class="badge">PRATO DA CASA</span>
+                    <h2>Picanha Sabor & Brasa</h2>
+                    <p class="preco">R$ 79,00</p>
+                    <p class="desc">Picanha grelhada na brasa, acompanhada de batatas rústicas, farofa crocante e molho especial da casa.</p>
+                    <button class="btn-primary" onclick="openProductModal('Picanha Sabor & Brasa', 79.00, 'Picanha grelhada na brasa, acompanhada de batatas rústicas, farofa crocante e molho especial da casa.', 'https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?w=600&q=80')">PEDIR AGORA</button>
+                </div>
+                <div class="prato-img fade-left">
+                    <img src="https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?w=800&q=80" alt="Picanha Sabor & Brasa" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiência -->
+        <section class="experiencia section-padding">
+            <div class="container">
+                <div class="section-header center fade-up">
+                    <h2>MAIS QUE UMA REFEIÇÃO</h2>
+                </div>
+                <div class="experiencia-grid">
+                    <div class="exp-card fade-up">
+                        <span class="icon">🍷</span>
+                        <h3>Ambiente</h3>
+                        <p>Um espaço pensado para encontros especiais.</p>
+                    </div>
+                    <div class="exp-card fade-up" style="transition-delay: 0.1s;">
+                        <span class="icon">🔥</span>
+                        <h3>Cozinha</h3>
+                        <p>Sabores preparados na hora.</p>
+                    </div>
+                    <div class="exp-card fade-up" style="transition-delay: 0.2s;">
+                        <span class="icon">🎵</span>
+                        <h3>Experiência</h3>
+                        <p>Boa comida, boa música e boas histórias.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria -->
+        <section id="galeria" class="galeria section-padding">
+            <div class="container">
+                <div class="section-header center fade-up">
+                    <h2>GALERIA</h2>
+                </div>
+                <div class="galeria-grid" id="galeria-grid">
+                    <!-- Imagens geradas via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section id="avaliacoes" class="depoimentos section-padding">
+            <div class="container">
+                <div class="slider-container fade-up">
+                    <div class="slider" id="slider">
+                        <div class="slide">
+                            <p class="quote">"Comida maravilhosa e atendimento impecável. Com certeza vamos voltar."</p>
+                            <p class="author">— Mariana Souza</p>
+                        </div>
+                        <div class="slide">
+                            <p class="quote">"O hambúrguer é sensacional e o ambiente é muito bonito."</p>
+                            <p class="author">— Lucas Almeida</p>
+                        </div>
+                        <div class="slide">
+                            <p class="quote">"Fomos em família e todo mundo adorou."</p>
+                            <p class="author">— Fernanda Costa</p>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button id="prev-slide" aria-label="Anterior">❮</button>
+                        <div class="slider-dots" id="slider-dots"></div>
+                        <button id="next-slide" aria-label="Próximo">❯</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reserva -->
+        <section id="reservas" class="reservas section-padding">
+            <div class="container reservas-container">
+                <div class="reserva-text fade-right">
+                    <h2>RESERVE SUA MESA</h2>
+                    <p>Quer garantir seu lugar? Faça sua reserva de forma rápida pelo WhatsApp.</p>
+                </div>
+                <div class="reserva-form fade-left">
+                    <form id="form-reserva">
+                        <div class="form-group">
+                            <label for="res-nome">Nome</label>
+                            <input type="text" id="res-nome" required placeholder="Seu nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="res-telefone">Telefone</label>
+                            <input type="tel" id="res-telefone" required placeholder="(51) 99293-4189">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="res-data">Data</label>
+                                <input type="date" id="res-data" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="res-horario">Horário</label>
+                                <input type="time" id="res-horario" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="res-pessoas">Número de pessoas</label>
+                            <input type="number" id="res-pessoas" min="1" max="20" required placeholder="Ex: 4">
+                        </div>
+                        <div class="form-group">
+                            <label for="res-obs">Observação (Opcional)</label>
+                            <textarea id="res-obs" rows="3" placeholder="Ex: mesa próxima à janela"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary full-width">RESERVAR PELO WHATSAPP</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram -->
+        <section class="instagram section-padding">
+            <div class="container center fade-up">
+                <h2>SIGA NOSSO INSTAGRAM</h2>
+                <a href="https://instagram.com/" target="_blank" class="ig-handle">@saborebrasa</a>
+                <div class="ig-grid">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=300&q=80" alt="Instagram post" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=300&q=80" alt="Instagram post" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=300&q=80" alt="Instagram post" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&q=80" alt="Instagram post" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=300&q=80" alt="Instagram post" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=300&q=80" alt="Instagram post" loading="lazy">
+                </div>
+                <a href="https://instagram.com/" target="_blank" class="btn-outline" style="margin-top: 2rem;">VER INSTAGRAM</a>
+            </div>
+        </section>
+
+        <!-- Localização -->
+        <section id="contato" class="localizacao section-padding">
+            <div class="container loc-container fade-up">
+                <div class="loc-info">
+                    <h2>ONDE ESTAMOS</h2>
+                    <p><strong>Endereço:</strong><br>Rua Exemplo, 500 — Centro, Canoas/RS</p>
+                    <p><strong>Telefone:</strong><br><a href="tel:+5551992934189">(51) 99293-4189</a></p>
+                    <p><strong>Horário:</strong><br>Segunda a domingo<br>11:30 às 23:00</p>
+                    <div class="loc-buttons">
+                        <a href="https://maps.google.com" target="_blank" class="btn-primary">ABRIR NO GOOGLE MAPS</a>
+                        <a href="https://maps.google.com" target="_blank" class="btn-outline">COMO CHEGAR</a>
+                    </div>
+                </div>
+                <div class="loc-map">
+                    <div class="map-placeholder">
+                        <span>Mapa Interativo</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>SABOR & BRASA</h2>
+                <p>Boa comida. Boas histórias.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#reservas">Reservas</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-contato">
+                <h3>Contato</h3>
+                <p>📞 (51) 99293-4189</p>
+                <p>📧 contato@saborebrasa.com.br</p>
+                <p>📍 Canoas, RS</p>
+            </div>
+            <div class="footer-social">
+                <h3>Redes Sociais</h3>
+                <div class="social-icons">
+                    <a href="https://instagram.com/" target="_blank" aria-label="Instagram">IG</a>
+                    <a href="https://facebook.com/" target="_blank" aria-label="Facebook">FB</a>
+                    <a href="https://wa.me/5551992934189" target="_blank" aria-label="WhatsApp">WA</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sabor & Brasa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5551992934189?text=Olá! Gostaria de saber mais sobre o Sabor & Brasa." target="_blank" class="wa-float" aria-label="WhatsApp">
+        <svg viewBox="0 0 32 32" width="32" height="32" fill="white">
+            <path d="M16 2a13 13 0 0 0-11 20l-2 6 6-2a13 13 0 1 0 7-24zm0 24a11 11 0 0 1-5-1l-3 1 1-3a11 11 0 1 1 7 3zm6-8c0 .4-.2 1-.8 1.4-.6.4-1.6.6-2.2.6s-1.8-.4-3.2-1c-1.4-.6-3-2.6-4.2-4.2-.6-.8-1.2-1.8-1.2-3s.6-2 1.2-2.6c.2-.2.6-.4 1-.4h.6c.2 0 .4 0 .6.4l1 2.4c.2.2.2.6 0 .8l-.6.8c-.2.2-.2.4 0 .6.6 1 1.6 2 2.6 2.6.2.2.6.2.8 0l.8-1c.2-.2.6-.4 1-.2l2.6 1.2c.4.2.4.6.4 1z"/>
+        </svg>
+    </a>
+
+    <!-- Modais -->
+    
+    <!-- Modal de Produto -->
+    <div class="modal-overlay" id="product-modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Fechar" onclick="closeModals()">&times;</button>
+            <img id="modal-img" src="" alt="Produto">
+            <h3 id="modal-title">Nome do Produto</h3>
+            <p id="modal-desc">Descrição</p>
+            <p class="preco" id="modal-price">R$ 0,00</p>
+            
+            <div class="modal-actions">
+                <div class="qty-control">
+                    <button onclick="updateModalQty(-1)">-</button>
+                    <span id="modal-qty">1</span>
+                    <button onclick="updateModalQty(1)">+</button>
+                </div>
+            </div>
+            
+            <div class="form-group" style="margin-top: 1rem;">
+                <label for="modal-obs">Observação</label>
+                <input type="text" id="modal-obs" placeholder="Ex: sem cebola">
+            </div>
+            
+            <button class="btn-primary full-width" onclick="addToCartFromModal()">ADICIONAR AO CARRINHO</button>
+        </div>
+    </div>
+
+    <!-- Modal do Carrinho -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>SEU PEDIDO</h3>
+            <button class="close-modal" aria-label="Fechar Carrinho" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Itens do carrinho JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <strong id="cart-total-price">R$ 0,00</strong>
+            </div>
+            <button class="btn-outline full-width" style="margin-bottom: 0.5rem;" onclick="clearCart()">LIMPAR CARRINHO</button>
+            <button class="btn-primary full-width" onclick="finishOrder()">FINALIZAR PEDIDO</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+    <!-- Lightbox Galeria -->
+    <div class="lightbox" id="lightbox">
+        <button class="close-modal" aria-label="Fechar" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-btn prev" onclick="changeLightboxImage(-1)">❮</button>
+        <img id="lightbox-img" src="" alt="Imagem Ampliada">
+        <button class="lightbox-btn next" onclick="changeLightboxImage(1)">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
